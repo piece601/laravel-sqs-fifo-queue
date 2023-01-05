@@ -3,7 +3,7 @@
 namespace piece601\LaravelSqsFifoQueue\Queue\Deduplicators;
 
 use Closure;
-use ShiftOneLabs\LaravelSqsFifoQueue\Contracts\Queue\Deduplicator;
+use piece601\LaravelSqsFifoQueue\Contracts\Queue\Deduplicator;
 
 class Callback implements Deduplicator
 {

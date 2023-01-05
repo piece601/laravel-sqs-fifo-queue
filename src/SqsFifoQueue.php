@@ -10,10 +10,10 @@ use InvalidArgumentException;
 use Illuminate\Queue\SqsQueue;
 use Illuminate\Mail\SendQueuedMailable;
 use Illuminate\Queue\CallQueuedHandler;
-use ShiftOneLabs\LaravelSqsFifoQueue\Support\Arr;
-use ShiftOneLabs\LaravelSqsFifoQueue\Support\Str;
+use piece601\LaravelSqsFifoQueue\Support\Arr;
+use piece601\LaravelSqsFifoQueue\Support\Str;
 use Illuminate\Notifications\SendQueuedNotifications;
-use ShiftOneLabs\LaravelSqsFifoQueue\Contracts\Queue\Deduplicator;
+use piece601\LaravelSqsFifoQueue\Contracts\Queue\Deduplicator;
 
 class SqsFifoQueue extends SqsQueue
 {
@@ -73,7 +73,7 @@ class SqsFifoQueue extends SqsQueue
      *
      * @param  \Aws\Sqs\SqsClient  $sqs
      *
-     * @return \ShiftOneLabs\LaravelSqsFifoQueue\SqsFifoQueue
+     * @return \piece601\LaravelSqsFifoQueue\SqsFifoQueue
      */
     public function setSqs(SqsClient $sqs)
     {

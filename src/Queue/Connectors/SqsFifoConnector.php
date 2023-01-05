@@ -7,8 +7,8 @@ use Illuminate\Support\Str;
 use InvalidArgumentException;
 use Illuminate\Queue\Connectors\SqsConnector;
 use Illuminate\Support\Arr as BaseArr;
-use ShiftOneLabs\LaravelSqsFifoQueue\Support\Arr;
-use ShiftOneLabs\LaravelSqsFifoQueue\SqsFifoQueue;
+use piece601\LaravelSqsFifoQueue\Support\Arr;
+use piece601\LaravelSqsFifoQueue\SqsFifoQueue;
 
 class SqsFifoConnector extends SqsConnector
 {

@@ -2,7 +2,7 @@
 
 namespace piece601\LaravelSqsFifoQueue\Queue\Deduplicators;
 
-use ShiftOneLabs\LaravelSqsFifoQueue\Contracts\Queue\Deduplicator;
+use piece601\LaravelSqsFifoQueue\Contracts\Queue\Deduplicator;
 
 class Content implements Deduplicator
 {

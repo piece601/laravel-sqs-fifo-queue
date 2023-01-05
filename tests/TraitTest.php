@@ -2,7 +2,7 @@
 
 namespace piece601\LaravelSqsFifoQueue\Tests;
 
-use ShiftOneLabs\LaravelSqsFifoQueue\Tests\Fakes\Job;
+use piece601\LaravelSqsFifoQueue\Tests\Fakes\Job;
 
 class TraitTest extends TestCase
 {

@@ -3,9 +3,9 @@
 namespace piece601\LaravelSqsFifoQueue\Tests;
 
 use InvalidArgumentException;
-use ShiftOneLabs\LaravelSqsFifoQueue\Support\Arr;
-use ShiftOneLabs\LaravelSqsFifoQueue\SqsFifoQueue;
-use ShiftOneLabs\LaravelSqsFifoQueue\Queue\Connectors\SqsFifoConnector;
+use piece601\LaravelSqsFifoQueue\Support\Arr;
+use piece601\LaravelSqsFifoQueue\SqsFifoQueue;
+use piece601\LaravelSqsFifoQueue\Queue\Connectors\SqsFifoConnector;
 
 class ConnectorTest extends TestCase
 {

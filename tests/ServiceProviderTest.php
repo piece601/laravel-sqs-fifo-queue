@@ -4,9 +4,9 @@ namespace piece601\LaravelSqsFifoQueue\Tests;
 
 use Illuminate\Container\Container;
 use Illuminate\Queue\QueueServiceProvider;
-use ShiftOneLabs\LaravelSqsFifoQueue\Contracts\Queue\Deduplicator;
-use ShiftOneLabs\LaravelSqsFifoQueue\Queue\Connectors\SqsFifoConnector;
-use ShiftOneLabs\LaravelSqsFifoQueue\LaravelSqsFifoQueueServiceProvider;
+use piece601\LaravelSqsFifoQueue\Contracts\Queue\Deduplicator;
+use piece601\LaravelSqsFifoQueue\Queue\Connectors\SqsFifoConnector;
+use piece601\LaravelSqsFifoQueue\LaravelSqsFifoQueueServiceProvider;
 
 class ServiceProviderTest extends TestCase
 {

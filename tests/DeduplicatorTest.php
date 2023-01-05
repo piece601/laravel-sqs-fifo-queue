@@ -2,10 +2,10 @@
 
 namespace piece601\LaravelSqsFifoQueue\Tests;
 
-use ShiftOneLabs\LaravelSqsFifoQueue\Queue\Deduplicators\Sqs;
-use ShiftOneLabs\LaravelSqsFifoQueue\Queue\Deduplicators\Unique;
-use ShiftOneLabs\LaravelSqsFifoQueue\Queue\Deduplicators\Content;
-use ShiftOneLabs\LaravelSqsFifoQueue\Queue\Deduplicators\Callback;
+use piece601\LaravelSqsFifoQueue\Queue\Deduplicators\Sqs;
+use piece601\LaravelSqsFifoQueue\Queue\Deduplicators\Unique;
+use piece601\LaravelSqsFifoQueue\Queue\Deduplicators\Content;
+use piece601\LaravelSqsFifoQueue\Queue\Deduplicators\Callback;
 
 class DeduplicatorTest extends TestCase
 {

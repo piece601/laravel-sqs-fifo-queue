@@ -2,8 +2,8 @@
 
 namespace piece601\LaravelSqsFifoQueue\Tests;
 
-use ShiftOneLabs\LaravelSqsFifoQueue\Tests\Fakes\Job;
-use ShiftOneLabs\LaravelSqsFifoQueue\Tests\Fakes\StandardJob;
+use piece601\LaravelSqsFifoQueue\Tests\Fakes\Job;
+use piece601\LaravelSqsFifoQueue\Tests\Fakes\StandardJob;
 
 class IntegrationTest extends TestCase
 {

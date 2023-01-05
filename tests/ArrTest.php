@@ -2,7 +2,7 @@
 
 namespace piece601\LaravelSqsFifoQueue\Tests;
 
-use ShiftOneLabs\LaravelSqsFifoQueue\Support\Arr;
+use piece601\LaravelSqsFifoQueue\Support\Arr;
 
 class ArrTest extends TestCase
 {
