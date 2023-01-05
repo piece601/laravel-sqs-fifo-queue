@@ -1,5 +1,5 @@
 {
-    "name": "Piece601/laravel-sqs-fifo-queue",
+    "name": "piece601/laravel-sqs-fifo-queue",
     "description": "Adds a Laravel queue driver for Amazon SQS FIFO queues.",
     "keywords": ["laravel", "lumen", "illuminate", "queue", "sqs", "fifo", "aws"],
     "homepage": "https://github.com/piece601/laravel-sqs-fifo-queue",
