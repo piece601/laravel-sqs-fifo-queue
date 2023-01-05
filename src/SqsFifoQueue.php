@@ -1,6 +1,6 @@
 <?php
 
-namespace ShiftOneLabs\LaravelSqsFifoQueue;
+namespace piece601\LaravelSqsFifoQueue;
 
 use LogicException;
 use Aws\Sqs\SqsClient;

@@ -1,6 +1,6 @@
 <?php
 
-namespace ShiftOneLabs\LaravelSqsFifoQueue\Tests;
+namespace piece601\LaravelSqsFifoQueue\Tests;
 
 use Exception;
 use Dotenv\Dotenv;

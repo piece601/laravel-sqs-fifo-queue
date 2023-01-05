@@ -1,6 +1,6 @@
 <?php
 
-namespace ShiftOneLabs\LaravelSqsFifoQueue\Tests;
+namespace piece601\LaravelSqsFifoQueue\Tests;
 
 use Illuminate\Container\Container;
 use Illuminate\Queue\QueueServiceProvider;

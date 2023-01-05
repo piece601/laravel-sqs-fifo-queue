@@ -1,6 +1,6 @@
 <?php
 
-namespace ShiftOneLabs\LaravelSqsFifoQueue\Support;
+namespace piece601\LaravelSqsFifoQueue\Support;
 
 use Illuminate\Support\Str as BaseStr;
 

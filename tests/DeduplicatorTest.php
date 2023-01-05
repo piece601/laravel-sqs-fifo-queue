@@ -1,6 +1,6 @@
 <?php
 
-namespace ShiftOneLabs\LaravelSqsFifoQueue\Tests;
+namespace piece601\LaravelSqsFifoQueue\Tests;
 
 use ShiftOneLabs\LaravelSqsFifoQueue\Queue\Deduplicators\Sqs;
 use ShiftOneLabs\LaravelSqsFifoQueue\Queue\Deduplicators\Unique;

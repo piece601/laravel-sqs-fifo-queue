@@ -1,6 +1,6 @@
 <?php
 
-namespace ShiftOneLabs\LaravelSqsFifoQueue;
+namespace piece601\LaravelSqsFifoQueue;
 
 use Illuminate\Support\ServiceProvider;
 use ShiftOneLabs\LaravelSqsFifoQueue\Queue\Deduplicators\Sqs;

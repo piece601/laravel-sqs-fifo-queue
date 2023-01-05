@@ -1,6 +1,6 @@
 <?php
 
-namespace ShiftOneLabs\LaravelSqsFifoQueue\Tests\Fakes;
+namespace piece601\LaravelSqsFifoQueue\Tests\Fakes;
 
 use ShiftOneLabs\LaravelSqsFifoQueue\Bus\SqsFifoQueueable;
 

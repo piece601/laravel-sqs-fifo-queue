@@ -1,6 +1,6 @@
 <?php
 
-namespace ShiftOneLabs\LaravelSqsFifoQueue\Queue\Connectors;
+namespace piece601\LaravelSqsFifoQueue\Queue\Connectors;
 
 use Aws\Sqs\SqsClient;
 use Illuminate\Support\Str;
