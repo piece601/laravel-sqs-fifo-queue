@@ -6,6 +6,7 @@ use Aws\Sqs\SqsClient;
 use Illuminate\Support\Str;
 use InvalidArgumentException;
 use Illuminate\Queue\Connectors\SqsConnector;
+use Illuminate\Support\Arr as BaseArr;
 use ShiftOneLabs\LaravelSqsFifoQueue\Support\Arr;
 use ShiftOneLabs\LaravelSqsFifoQueue\SqsFifoQueue;
 
@@ -35,7 +36,7 @@ class SqsFifoConnector extends SqsConnector
         $allowDelay = (bool)Arr::pull($config, 'allow_delay', false);
 
         return new SqsFifoQueue(
-            new SqsClient($config),
+            new SqsClient(BaseArr::except($config, ['token'])),
             $config['queue'],
             Arr::get($config, 'prefix', ''),
             Arr::get($config, 'suffix', ''),
