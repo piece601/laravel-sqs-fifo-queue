@@ -1,6 +1,6 @@
 <?php
 
-namespace piece601\LaravelSqsFifoQueue\Support;
+namespace Piece601\LaravelSqsFifoQueue\Support;
 
 use Illuminate\Support\Arr as BaseArr;
 

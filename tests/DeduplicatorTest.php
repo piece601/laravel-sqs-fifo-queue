@@ -1,11 +1,11 @@
 <?php
 
-namespace piece601\LaravelSqsFifoQueue\Tests;
+namespace Piece601\LaravelSqsFifoQueue\Tests;
 
-use piece601\LaravelSqsFifoQueue\Queue\Deduplicators\Sqs;
-use piece601\LaravelSqsFifoQueue\Queue\Deduplicators\Unique;
-use piece601\LaravelSqsFifoQueue\Queue\Deduplicators\Content;
-use piece601\LaravelSqsFifoQueue\Queue\Deduplicators\Callback;
+use Piece601\LaravelSqsFifoQueue\Queue\Deduplicators\Sqs;
+use Piece601\LaravelSqsFifoQueue\Queue\Deduplicators\Unique;
+use Piece601\LaravelSqsFifoQueue\Queue\Deduplicators\Content;
+use Piece601\LaravelSqsFifoQueue\Queue\Deduplicators\Callback;
 
 class DeduplicatorTest extends TestCase
 {

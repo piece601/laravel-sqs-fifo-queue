@@ -1,6 +1,6 @@
 <?php
 
-namespace piece601\LaravelSqsFifoQueue;
+namespace Piece601\LaravelSqsFifoQueue;
 
 use LogicException;
 use Aws\Sqs\SqsClient;
@@ -10,10 +10,10 @@ use InvalidArgumentException;
 use Illuminate\Queue\SqsQueue;
 use Illuminate\Mail\SendQueuedMailable;
 use Illuminate\Queue\CallQueuedHandler;
-use piece601\LaravelSqsFifoQueue\Support\Arr;
-use piece601\LaravelSqsFifoQueue\Support\Str;
+use Piece601\LaravelSqsFifoQueue\Support\Arr;
+use Piece601\LaravelSqsFifoQueue\Support\Str;
 use Illuminate\Notifications\SendQueuedNotifications;
-use piece601\LaravelSqsFifoQueue\Contracts\Queue\Deduplicator;
+use Piece601\LaravelSqsFifoQueue\Contracts\Queue\Deduplicator;
 
 class SqsFifoQueue extends SqsQueue
 {
@@ -73,7 +73,7 @@ class SqsFifoQueue extends SqsQueue
      *
      * @param  \Aws\Sqs\SqsClient  $sqs
      *
-     * @return \piece601\LaravelSqsFifoQueue\SqsFifoQueue
+     * @return \Piece601\LaravelSqsFifoQueue\SqsFifoQueue
      */
     public function setSqs(SqsClient $sqs)
     {

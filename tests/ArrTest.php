@@ -1,8 +1,8 @@
 <?php
 
-namespace piece601\LaravelSqsFifoQueue\Tests;
+namespace Piece601\LaravelSqsFifoQueue\Tests;
 
-use piece601\LaravelSqsFifoQueue\Support\Arr;
+use Piece601\LaravelSqsFifoQueue\Support\Arr;
 
 class ArrTest extends TestCase
 {

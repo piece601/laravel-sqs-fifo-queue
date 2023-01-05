@@ -1,14 +1,14 @@
 <?php
 
-namespace piece601\LaravelSqsFifoQueue\Queue\Connectors;
+namespace Piece601\LaravelSqsFifoQueue\Queue\Connectors;
 
 use Aws\Sqs\SqsClient;
 use Illuminate\Support\Str;
 use InvalidArgumentException;
 use Illuminate\Queue\Connectors\SqsConnector;
 use Illuminate\Support\Arr as BaseArr;
-use piece601\LaravelSqsFifoQueue\Support\Arr;
-use piece601\LaravelSqsFifoQueue\SqsFifoQueue;
+use Piece601\LaravelSqsFifoQueue\Support\Arr;
+use Piece601\LaravelSqsFifoQueue\SqsFifoQueue;
 
 class SqsFifoConnector extends SqsConnector
 {

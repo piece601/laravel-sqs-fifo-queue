@@ -1,12 +1,12 @@
 <?php
 
-namespace piece601\LaravelSqsFifoQueue\Tests;
+namespace Piece601\LaravelSqsFifoQueue\Tests;
 
 use Illuminate\Container\Container;
 use Illuminate\Queue\QueueServiceProvider;
-use piece601\LaravelSqsFifoQueue\Contracts\Queue\Deduplicator;
-use piece601\LaravelSqsFifoQueue\Queue\Connectors\SqsFifoConnector;
-use piece601\LaravelSqsFifoQueue\LaravelSqsFifoQueueServiceProvider;
+use Piece601\LaravelSqsFifoQueue\Contracts\Queue\Deduplicator;
+use Piece601\LaravelSqsFifoQueue\Queue\Connectors\SqsFifoConnector;
+use Piece601\LaravelSqsFifoQueue\LaravelSqsFifoQueueServiceProvider;
 
 class ServiceProviderTest extends TestCase
 {

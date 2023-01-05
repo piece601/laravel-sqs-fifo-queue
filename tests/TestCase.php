@@ -1,6 +1,6 @@
 <?php
 
-namespace piece601\LaravelSqsFifoQueue\Tests;
+namespace Piece601\LaravelSqsFifoQueue\Tests;
 
 use Exception;
 use Dotenv\Dotenv;
@@ -11,7 +11,7 @@ use Illuminate\Queue\SqsQueue;
 use PHPUnit_Framework_TestCase;
 use Illuminate\Encryption\Encrypter;
 use Illuminate\Queue\Capsule\Manager as Capsule;
-use piece601\LaravelSqsFifoQueue\LaravelSqsFifoQueueServiceProvider;
+use Piece601\LaravelSqsFifoQueue\LaravelSqsFifoQueueServiceProvider;
 
 class TestCase extends PHPUnit_Framework_TestCase
 {

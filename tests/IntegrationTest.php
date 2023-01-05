@@ -1,9 +1,9 @@
 <?php
 
-namespace piece601\LaravelSqsFifoQueue\Tests;
+namespace Piece601\LaravelSqsFifoQueue\Tests;
 
-use piece601\LaravelSqsFifoQueue\Tests\Fakes\Job;
-use piece601\LaravelSqsFifoQueue\Tests\Fakes\StandardJob;
+use Piece601\LaravelSqsFifoQueue\Tests\Fakes\Job;
+use Piece601\LaravelSqsFifoQueue\Tests\Fakes\StandardJob;
 
 class IntegrationTest extends TestCase
 {

@@ -1,9 +1,9 @@
 <?php
 
-namespace piece601\LaravelSqsFifoQueue\Queue\Deduplicators;
+namespace Piece601\LaravelSqsFifoQueue\Queue\Deduplicators;
 
 use Ramsey\Uuid\Uuid;
-use piece601\LaravelSqsFifoQueue\Contracts\Queue\Deduplicator;
+use Piece601\LaravelSqsFifoQueue\Contracts\Queue\Deduplicator;
 
 class Unique implements Deduplicator
 {

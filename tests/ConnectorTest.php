@@ -1,11 +1,11 @@
 <?php
 
-namespace piece601\LaravelSqsFifoQueue\Tests;
+namespace Piece601\LaravelSqsFifoQueue\Tests;
 
 use InvalidArgumentException;
-use piece601\LaravelSqsFifoQueue\Support\Arr;
-use piece601\LaravelSqsFifoQueue\SqsFifoQueue;
-use piece601\LaravelSqsFifoQueue\Queue\Connectors\SqsFifoConnector;
+use Piece601\LaravelSqsFifoQueue\Support\Arr;
+use Piece601\LaravelSqsFifoQueue\SqsFifoQueue;
+use Piece601\LaravelSqsFifoQueue\Queue\Connectors\SqsFifoConnector;
 
 class ConnectorTest extends TestCase
 {

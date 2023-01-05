@@ -1,12 +1,12 @@
 <?php
 
-namespace piece601\LaravelSqsFifoQueue;
+namespace Piece601\LaravelSqsFifoQueue;
 
 use Illuminate\Support\ServiceProvider;
-use piece601\LaravelSqsFifoQueue\Queue\Deduplicators\Sqs;
-use piece601\LaravelSqsFifoQueue\Queue\Deduplicators\Unique;
-use piece601\LaravelSqsFifoQueue\Queue\Deduplicators\Content;
-use piece601\LaravelSqsFifoQueue\Queue\Connectors\SqsFifoConnector;
+use Piece601\LaravelSqsFifoQueue\Queue\Deduplicators\Sqs;
+use Piece601\LaravelSqsFifoQueue\Queue\Deduplicators\Unique;
+use Piece601\LaravelSqsFifoQueue\Queue\Deduplicators\Content;
+use Piece601\LaravelSqsFifoQueue\Queue\Connectors\SqsFifoConnector;
 
 class LaravelSqsFifoQueueServiceProvider extends ServiceProvider
 {

@@ -1,6 +1,6 @@
 <?php
 
-namespace piece601\LaravelSqsFifoQueue\Contracts\Queue;
+namespace Piece601\LaravelSqsFifoQueue\Contracts\Queue;
 
 interface Deduplicator
 {

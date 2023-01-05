@@ -32,7 +32,7 @@ This package uses auto package discovery. The service provider will automaticall
 Open `config/app.php` and add following line to the providers array:
 
 ``` php
-piece601\LaravelSqsFifoQueue\LaravelSqsFifoQueueServiceProvider::class,
+Piece601\LaravelSqsFifoQueue\LaravelSqsFifoQueueServiceProvider::class,
 ```
 
 #### Laravel 4 (4.1, 4.2)
@@ -40,7 +40,7 @@ piece601\LaravelSqsFifoQueue\LaravelSqsFifoQueueServiceProvider::class,
 Open `app/config/app.php` and add following line to the providers array:
 
 ``` php
-'piece601\LaravelSqsFifoQueue\LaravelSqsFifoQueueServiceProvider',
+'Piece601\LaravelSqsFifoQueue\LaravelSqsFifoQueueServiceProvider',
 ```
 
 #### Lumen 5, 6, 7, 8 (5.0, 5.1, 5.2, 5.3, 5.4, 5.5, 5.6, 5.7, 5.8, 6.x, 7.x, 8.x)
@@ -48,7 +48,7 @@ Open `app/config/app.php` and add following line to the providers array:
 Open `bootstrap/app.php` and add following line under the "Register Service Providers" section:
 
 ``` php
-$app->register(piece601\LaravelSqsFifoQueue\LaravelSqsFifoQueueServiceProvider::class);
+$app->register(Piece601\LaravelSqsFifoQueue\LaravelSqsFifoQueueServiceProvider::class);
 ```
 
 ## Configuration
@@ -130,7 +130,7 @@ If using the `illuminate\queue` component Capsule outside of Lumen/Laravel:
 
 ``` php
 use Illuminate\Queue\Capsule\Manager as Queue;
-use piece601\LaravelSqsFifoQueue\LaravelSqsFifoQueueServiceProvider;
+use Piece601\LaravelSqsFifoQueue\LaravelSqsFifoQueueServiceProvider;
 
 $queue = new Queue;
 
@@ -227,7 +227,7 @@ Setting the `allow_delay` config option to `true` for a queue will allow the `la
 
 #### Per-Job Group and Deduplicator
 
-If you need to change the group or the deduplicator for a specific job, you will need access to the `onMessageGroup()` and `withDeduplicator()` methods. These methods are provided through the `piece601\LaravelSqsFifoQueue\Bus\SqsFifoQueueable` trait. Once you add this trait to your job class, you can change the group and/or the deduplicator for that specific job without affecting any other jobs on the queue.
+If you need to change the group or the deduplicator for a specific job, you will need access to the `onMessageGroup()` and `withDeduplicator()` methods. These methods are provided through the `Piece601\LaravelSqsFifoQueue\Bus\SqsFifoQueueable` trait. Once you add this trait to your job class, you can change the group and/or the deduplicator for that specific job without affecting any other jobs on the queue.
 
 #### Code Example
 
@@ -242,7 +242,7 @@ use Illuminate\Bus\Queueable;
 use Illuminate\Queue\SerializesModels;
 use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Contracts\Queue\ShouldQueue;
-use piece601\LaravelSqsFifoQueue\Bus\SqsFifoQueueable;
+use Piece601\LaravelSqsFifoQueue\Bus\SqsFifoQueueable;
 
 class ProcessCoin implements ShouldQueue
 {
@@ -274,7 +274,7 @@ namespace App\Notifications;
 use Illuminate\Bus\Queueable;
 use Illuminate\Notifications\Notification;
 use Illuminate\Contracts\Queue\ShouldQueue;
-use piece601\LaravelSqsFifoQueue\Bus\SqsFifoQueueable;
+use Piece601\LaravelSqsFifoQueue\Bus\SqsFifoQueueable;
 
 class InvoicePaid extends Notification implements ShouldQueue
 {
@@ -303,7 +303,7 @@ use Illuminate\Bus\Queueable;
 use Illuminate\Mail\Mailable;
 use Illuminate\Queue\SerializesModels;
 use Illuminate\Contracts\Queue\ShouldQueue;
-use piece601\LaravelSqsFifoQueue\Bus\SqsFifoQueueable;
+use Piece601\LaravelSqsFifoQueue\Bus\SqsFifoQueueable;
 
 class OrderShipped extends Mailable implements ShouldQueue
 {
@@ -328,13 +328,13 @@ The deduplicators work by generating a deduplication id that is sent to the queu
 
 If you have some custom logic that needs to be used to generate the deduplication id, you can register your own custom deduplicator. The deduplicators are stored in the IoC container with the prefix `queue.sqs-fifo.deduplicator`. So, for example, the `unique` deduplicator is aliased to `queue.sqs-fifo.deduplicator.unique`.
 
-Custom deduplicators are created by registering a new prefixed alias in the IoC. This alias should resolve to a new object instance that implements the `piece601\LaravelSqsFifoQueue\Contracts\Queue\Deduplicator` contract. You can either define a new class that implements this contract, or you can create a new `piece601\LaravelSqsFifoQueue\Queue\Deduplicators\Callback` instance, which takes a `Closure` that performs the deduplication logic. The defined `Closure` should take two parameters: `$payload` and `$queue`, where `$payload` is the `json_encoded()` message to send to the queue, and `$queue` is the name of the queue to which the message is being sent. The generated id must not be more than 128 characters, and can contain alphanumeric characters and punctuation (``!"#$%&'()*+,-./:;<=>?@[\]^_`{|}~``).
+Custom deduplicators are created by registering a new prefixed alias in the IoC. This alias should resolve to a new object instance that implements the `Piece601\LaravelSqsFifoQueue\Contracts\Queue\Deduplicator` contract. You can either define a new class that implements this contract, or you can create a new `Piece601\LaravelSqsFifoQueue\Queue\Deduplicators\Callback` instance, which takes a `Closure` that performs the deduplication logic. The defined `Closure` should take two parameters: `$payload` and `$queue`, where `$payload` is the `json_encoded()` message to send to the queue, and `$queue` is the name of the queue to which the message is being sent. The generated id must not be more than 128 characters, and can contain alphanumeric characters and punctuation (``!"#$%&'()*+,-./:;<=>?@[\]^_`{|}~``).
 
 So, for example, if you wanted to create a `random` deduplicator that would randomly select some jobs to be duplicates, you could add the following line in the `register()` method of your `AppServiceProvider`:
 
 ``` php
 $this->app->bind('queue.sqs-fifo.deduplicator.random', function ($app) {
-    return new \piece601\LaravelSqsFifoQueue\Queue\Deduplicators\Callback(function ($payload, $queue) {
+    return new \Piece601\LaravelSqsFifoQueue\Queue\Deduplicators\Callback(function ($payload, $queue) {
         // Return the deduplication id generated for messages. Randomly 0 or 1.
         return mt_rand(0,1);
     });
@@ -346,7 +346,7 @@ Or, if you prefer to create a new class, your class would look like this:
 ``` php
 namespace App\Deduplicators;
 
-use piece601\LaravelSqsFifoQueue\Contracts\Queue\Deduplicator;
+use Piece601\LaravelSqsFifoQueue\Contracts\Queue\Deduplicator;
 
 class Random implements Deduplicator
 {
